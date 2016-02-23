@@ -16,6 +16,7 @@ public class User implements Serializable {
 	@org.hibernate.annotations.NaturalId
 	private String email;
 	private String passworld;
+	private boolean active;
 	public Integer getCode() {
 		return code;
 	}
@@ -39,6 +40,14 @@ public class User implements Serializable {
 	}
 	public void setPassworld(String passworld) {
 		this.passworld = passworld;
+	}
+	
+	public boolean isActive() {
+		return active;
+	}
+	
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 	@Override
 	public int hashCode() {
@@ -81,6 +90,5 @@ public class User implements Serializable {
 			return false;
 		return true;
 	}
-	
 	
 }

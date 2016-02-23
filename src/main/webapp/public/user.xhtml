@@ -6,7 +6,20 @@ xmlns:f = "http://xmlns.jcp.org/jsf/core" >
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<title> WebMonitoring </title>
 </h:head>
-	
+	<h1>Cadrasto de user</h1>
+	<hr/>
+	<h:form acceptcharset="UTF-8">
+		<h:message />
+		<h:panelGrid columns="2">
+		<h:outputLabel value="Email"  for="email"/>
+		<h:inputText id="email"  label="Email" value="#{userBean.user.email}"  required="true"/>
+		<h:outputLabel value="Passworld:" for="passworld"/>
+		<h:inputSecret id="passworld" label="Passworld" value="#{userBean.user.passworld}" required="true" />
+		<h:outputLabel value="Confirm the password:" for="confirmThePassword"/>
+		<h:inputSecret id="confirmThePassword" label="Confirm the password" value="#{userBean.confirmPassworld}" required="true" />
+		<h:commandButton value="save" action="#{userBean.save}" />
+	</h:panelGrid>
+	</h:form>
 <h:body>
 </h:body>
 
